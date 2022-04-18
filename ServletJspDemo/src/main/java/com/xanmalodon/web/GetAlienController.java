@@ -26,6 +26,9 @@ public class GetAlienController extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("showAlien.jsp");
 		rd.forward(request, response);
 		// ainsi, le client ne voit pas de changement d'url contrairement à redirect
+		// request.setAttribute("alien", a1); ne marche pas, il faut travailler avec HttpSession session = request.getSession(); session.setAttribute("alien", a1);
+		// response.sendRedirect("showAlien.jsp");
+
 	}
 
 }
